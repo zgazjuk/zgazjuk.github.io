@@ -19,11 +19,23 @@ nav{
     text-align: center;
 }
 
-.motto{
+.center{
     text-align: center;
+}
+
+.imgcenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .prompt{
     font-size: 20px;
 }
+
+.validator{
+    text-decoration: none;
+}
+
+
 
