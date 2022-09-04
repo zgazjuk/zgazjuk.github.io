@@ -1,0 +1,15 @@
+h1, h2, h3{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: bisque;
+    font-family:'Times New Roman', Times, serif;
+}
+
+footer{
+    text-align: center;
+}
+
+
