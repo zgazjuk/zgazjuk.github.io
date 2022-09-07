@@ -1,3 +1,4 @@
+/* Main Elements */
 h1, h2, h3{
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -15,24 +16,11 @@ footer{
     color: #EDF5E1;
 }
 
+
+
+/* navigation bar elements */
 nav{
     text-align: center;
-}
-
-.center{
-    text-align: center;
-}
-
-.imgcenter{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 70%;
-    width: 70%;
-}
-
-.validator{
-    text-decoration: none;
 }
 
 nav a:link{
@@ -49,5 +37,56 @@ nav a:hover{
 
 nav{
     font-size: 25px;
+}
+
+
+/* Figure Elements */
+figcaption{
+    font-size: 20px;
+    margin-left: 200px;
+}
+
+figure{
+    margin-left: 0px;
+}
+
+/* Table Elements */
+table, th, td{
+    border: 1px solid #05386B;
+}
+
+th{
+    background-color: #05386B;
+    color: #EDF5E1;
+}
+
+table tr:nth-child(even){
+    background-color: grey;
+}
+
+table tr:nth-child(odd){
+    background-color: lightskyblue;
+}
+
+/* Class elements */
+.LeftAllign{
+    color: #05386B;
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.imgcenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70%;
+    width: 70%;
+}
+
+.validator{
+    text-decoration: none;
 }
 
