@@ -91,16 +91,13 @@ table tr:nth-child(odd){
 }
 
 /* Anchor Elements */
-a{
+.company{
     text-decoration: none;
 }
-a:link{
+.company:link, .company:visited{
     color: #EDF5E1;
 }
-a:hover{
+.company:hover{
     color: #05386B;
-}
-a:visited{
-    color: #EDF5E1;
 }
 
