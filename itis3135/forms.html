@@ -31,8 +31,51 @@
   </header>
   
   <body>
-    <h1>Welcome to Zach's ITIS 3135 Webpage</h1>
-    <h2 class="prompt">Get started by selecting from the menu option above!</h2>
+    <h2>Activity #3: HTML Forms</h2>
+    <h3 class="LeftAllign"><b>Please fill out the form below:</b></h3>
+    <form action="#">
+      <label>Name: <input type="text" name="name" placeholder="Name" maxlength="30" required></label>
+      <br>
+      <label>Phone Number: <input type="text" name="phone" placeholder="Phone Number" maxlength="12" size="12" required></label>
+      <br>
+      <label>Email: <input type="text" name="email" placeholder="Email Address" maxlength="30" required></label>
+      <br>
+      <label>Gender: </label>
+      <label>Male<input type="radio" id="male" name="gender" required></label>
+      <label>Female<input type="radio" id="female" name="gender" required></label>
+      <br>
+      <label>Age: <input type="number" name="age" placeholder="Age" required></label>
+      <!-- Radio buttons: How did you hear about us -->
+      <fieldset>
+        <legend>How did you hear about us:</legend>
+        <label><input value="social-media" id="social-media" type="checkbox" name="source">Social Media</label>
+        <br>
+        <label><input value="friend" id="friend" type="checkbox" name="source">Friend</label>
+        <br>
+        <label><input value="flyer" id="flyer" type="checkbox" name="source">Flyer</label>
+        <br>
+        <label><input value="other" id="other" type="checkbox" name="source">Other</label>
+        <label><input type="text" name="other" maxlength="20"></label>
+      </fieldset>
+
+      <!-- Dropdown menu -->
+      <label for="country">Which country are you from?</label>
+      <select name="country" id="country">
+        <option value="US">Untited States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="Canada">Canada</option>
+        <option value="Mexico">Mexico</option>
+        <option value="China">China</option>
+        <option value="Germany">Germany</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <!-- Submit and Reset-->
+      <br>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+
   </body>
 
   <footer>

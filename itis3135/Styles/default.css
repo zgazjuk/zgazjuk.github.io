@@ -101,3 +101,17 @@ table tr:nth-child(odd){
     color: #05386B;
 }
 
+/* Form elements */
+fieldset{
+    border-color: #EDF5E1;
+}
+button{
+    background-color: #05386B;
+    color: #EDF5E1;
+}
+::placeholder{
+    color: #05386B;
+    font-family: 'Roboto Serif', serif
+}
+
+
