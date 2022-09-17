@@ -101,6 +101,15 @@ p a:hover{
     color: #05386B;
 }
 
+section h3 a:link, section h3 a:visited{
+    color: #05386B;
+}
+section h3 a:hover{
+    color: #EDF5E1;
+}
+
+
+
 /* Form elements */
 fieldset{
     border-color: #EDF5E1;
@@ -113,5 +122,6 @@ button{
     color: #05386B;
     font-family: 'Roboto Serif', serif
 }
+
 
 
