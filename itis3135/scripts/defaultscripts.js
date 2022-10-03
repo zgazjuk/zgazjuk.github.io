@@ -1,19 +1,22 @@
 var date = new Date();
 var pastFeedback = [];
 
-window.onload = function(){
+window.onload = function()
+{
     document.getElementById("date").innerHTML = "Today is " + date.toLocaleTimeString() + " on " + date.toDateString();
 
 }
 
-function displayWelcome(){
+function displayWelcome()
+{
     var name = document.getElementById("name").value;
     var mood = document.getElementById("mood").value;
     var message = "The ZG welcomes you, " + name + "." +  " We're glad you are doing " + mood + "!";
     alert(message);
 }
 
-function pricing(){
+function pricing()
+{
     var service = prompt("Enter a service #: \n1. Web design\n2. Software development\n3. Game development\n4. Technical Assistance", 1);
     var hours = prompt("How many hours? (min 10)", 10);
     
@@ -34,7 +37,8 @@ function pricing(){
     }
 } 
 
-function ratings(){
+function ratings()
+{
     var rating = prompt("Please rate our service 1-5! ", 5);
     if(rating >= 3 && rating <= 5){
         alert("Thanks for the positive review! To give feedback select the 'Feedback' button.");
@@ -45,23 +49,56 @@ function ratings(){
     }
 }
 
-function feedback(){
+function feedback()
+{
     var feedback = prompt("Please give your honest feedback: ", "Feedback goes here");
     pastFeedback.push(feedback);
     alert("Thanks for the following feedback! We will thoroughly look through this. Feedback: " + "'" + feedback + "'")
 }
 
-function paymentMethod(){
+function paymentMethod()
+{
     var nameOnCard = prompt("Enter the name on your card: ", "Bob");
     var cardNum = prompt("Enter your card number: ", "1111 1111 1111 1111");
     var cvv = prompt("Enter your security code: ", "123");
     alert("Card has been added! \nName: " + nameOnCard + "\nNumber: " + cardNum + "\nCVV: " + cvv);
 }
 
-function pastReviews(){
+function pastReviews()
+{
     var allReviews = "Reviews: \n";
     for(var i = 0; i < pastFeedback.length; i++){
         allReviews = allReviews + "\n\n" + (i + 1) + ". " + pastFeedback[i];
     }
     alert(allReviews);
+}
+
+function getShape()
+{
+    while(true){
+        const polygons = ["Henagon", "Digon", "Trigon", "Tretragon", "Pentagon", "Hexagon", "Heptagon", "Octagon", "Enneagon", "Decagon"];
+        let input = prompt("The Zoomin Giraffe would like a number 1-10: ", 1);
+        if(!validateEntry(input)){
+            continue;
+        }else{
+            alert(polygons[Math.abs(Math.round(input)) - 1]);
+            break;
+        }
+    }
+
+}
+
+function validateEntry(input)
+{
+    if(isNaN(input)){
+        return false;
+    }
+    
+    if(input < -10 || input > 10 || input == 0 || input == null)
+    {
+        return false;
+    }
+    
+    return true;
+    
 }
