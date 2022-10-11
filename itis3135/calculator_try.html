@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Linking the font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/default.css" type="text/css">
+  <title> Zach Gazjuk | ITIS 3135 | Welcome </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <script src="scripts/calculator_try.js"></script>
+
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h2>Assignment #7 Calculator Build</h2>
+    <div class="calc">
+      <p class="display" id="display">0</p>
+      <p class="display" id="output">0</p>
+      <div class="buttons">
+        <button class="operator" onclick="performAction('+'), operatorClicked()"  id="add">+</button>
+        <button class="operator" onclick="performAction('-'), operatorClicked()" id="subract">-</button>
+        <button class="operator" onclick="performAction('*'), operatorClicked()" id="multiply">*</button>
+        <button class="operator" onclick="performAction('/'), operatorClicked()" id="divide">/</button>
+        <button class="number" onclick="performAction('7')">7</button>
+        <button class="number" onclick="performAction('8')">8</button>
+        <button class="number" onclick="performAction('9')">9</button>
+        <button class="ans" onclick="ans()">Ans</button>
+        <button class="number" onclick="performAction('4')">4</button>
+        <button class="number" onclick="performAction('5')">5</button>
+        <button class="number" onclick="performAction('6')">6</button>
+        <button class="clear" onclick="clearCalc()">Clear</button>
+        <button class="number" onclick="performAction('1')">1</button>
+        <button class="number" onclick="performAction('2')">2</button>
+        <button class="number" onclick="performAction('3')">3</button>
+        <button class="number" onclick="performAction('0')">0</button>
+        <button class="decimal" onclick="performAction('.')">.</button>
+        <button class="operator" onclick="performAction('-'), operatorClicked()">Neg</button>
+
+      </div>
+    </div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="scripts/HTMLInclude.js"></script>
+</body>
+
+</html>
