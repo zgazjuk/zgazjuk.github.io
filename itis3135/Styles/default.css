@@ -147,6 +147,8 @@ button{
 
 .number, .operator, .clear, .decimal, .ans, .neg{
     background-color: #EDF5E1;
+    border-style: solid;
+    border-color:#05386B;
     padding: 10px;
 }
 
@@ -163,7 +165,7 @@ button{
 
 div button{
     color: black;
-    border-style: hidden;
+    border-style: solid;
     border-color: black;
 }
 
