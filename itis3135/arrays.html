@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Linking the font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/default.css" type="text/css">
+  <title> Zach Gazjuk | ITIS 3135 | Arrays </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <script src="scripts/arrays.js"></script>
+
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h2>Activity #8 Arrays</h2>
+    <label>Select the employee: </label>
+    <select name="employee" id="employee">
+        <option value="Zach Gazjuk">Zach Gazjuk</option>
+        <option value="Andrew Giocondi">Andrew Giocondi</option>
+        <option value="Jacob Gardina">Jacob Gardina</option>
+        <option value="Joe Mcshea">Joe Mcshea</option>
+        <option value="Evan Fodness">Evan Fodness</option>
+        <option value="Justin Wang">Justin Wang</option>
+        <option value="Ben Gazjuk">Ben Gazjuk</option>
+    </select>
+    <br>
+    <label>Enter the salary: $<input type="number" id="salary" required></label>
+    <br>
+    <button onclick="addSalary()">Add Salary</button>
+    <button onclick="displayResults()">Display Results</button>
+    <button onclick="displaySalary()">Display Salary</button>
+    <div id="results"></div>
+    <div id="results_table"></div>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="scripts/HTMLInclude.js"></script>
+</body>
+
+</html>
