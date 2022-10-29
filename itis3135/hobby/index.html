@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zach Gazjuk | Weightlifting Hobby Website</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat:wght@200&family=Oswald:wght@200&display=swap" rel="stylesheet">
+        <!-- background-d8dbe2 secondary background-a9bcd0 other-58a4b0 h1, h2, h3-eb5e55 p-495159 -->
+        <style>
+            h1, h2, h3{
+                text-align: center;
+                color: #eb5e55;
+                font-family: 'Inter', sans-serif;
+            }
+            p, li{
+                color: #58a4b0;
+                margin-left: 100px; 
+                margin-right: 100px;
+                font-family: 'Oswald', sans-serif;
+            }
+            body{
+                background-color: #495159;
+            }
+            a{
+                text-decoration: none;
+                font-family: 'Inter', sans-serif;
+            }
+            img{
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            a, a:visited{
+                color: #eb5e55;
+                font-size: 25px;
+            }
+            a:hover{
+                color: #58a4b0;
+            }
+            .hidden_desc{
+                display: none;
+                visibility: hidden;
+            }
+            /* Table styles */
+            table{
+                width: 30%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            table, th, td{
+                border: 1px solid #58a4b0;
+            }
+
+            th{
+                background-color: #495159;
+                color: #eb5e55;
+            }
+
+            table tr:nth-child(even){
+                background-color: grey;
+            }
+
+            table tr:nth-child(odd){
+                background-color: #a9bcd0;
+            }
+            /* input elements */
+            label{
+                color: #58a4b0;
+                font-family: 'Oswald', sans-serif;
+            }
+            figcaption{
+                color: #58a4b0;
+                font-family: 'Oswald', sans-serif;
+            }
+            button{
+                background-color: black;
+                color: #eb5e55;
+            }
+            textarea, input{
+                background-color: lightgrey;
+            }
+        </style>
+        <script>
+            function change_tab(id)
+            {
+              document.getElementById("placeholder").innerHTML=document.getElementById(id + "_desc").innerHTML;
+              document.getElementById("home").className="notselected";
+              document.getElementById("about").className="notselected";
+              document.getElementById("schedule").className="notselected";
+              document.getElementById(id).className="selected";
+            }
+            function max_calculator(){
+                let weight = parseFloat(document.getElementById("weight").value);
+                let reps = parseFloat(document.getElementById("reps").value);
+                let out = document.getElementById("output");
+                if(isNaN(reps) || isNaN(weight)){
+                    alert("Weight and reps must be a number value!");
+                }else{
+                    if(reps == 1){
+                        out.innerHTML = "Your estimated max is: " + weight + " lbs!";
+                    }else{
+                        let result = weight * (1 + (reps / 30));
+                        out.innerHTML = "Your estimated max is: " + result + " lbs!";
+                    }
+                }
+
+            }
+            let goals = [];
+            function set_goal(){
+                let goal = document.getElementById("goal").value;
+                let goal_output = document.getElementById("goal_list");
+                goals.push(goal);
+                let goal_list = "";
+                for(let i = 0; i < goals.length; i++){
+                    goal_list = goal_list + "<li>" + goals[i] + "</li>";
+                }
+                goal_output.innerHTML = "<ol>" + goal_list + "</ol>";
+
+            }
+            function clear_text(){
+                let goal_output = document.getElementById("goal_list");
+                let goal = document.getElementById("goal");
+                goal_output.innerHTML = "";
+                goal.innerHTML = "";
+                goals = [];
+            }
+            
+           </script>
+    </head>
+    <body>
+        <header>
+            <h1>Zachary Gazjuk | Weightlifting Hobby Site</h1>
+            <div class="menu">
+                <nav style="text-align: center;">
+                    <a class="selected" id="home" onclick="change_tab(this.id)">Home</a>
+                    |
+                    <a class="notselected" id="about" onclick="change_tab(this.id)">About Me</a>
+                    |
+                    <a class="notselected" id="schedule" onclick="change_tab(this.id)">Schedule</a>
+                    |
+                    <a class="notselected" id="progression" onclick="change_tab(this.id)">Progression</a>
+                    |
+                    <a class="notselected" id="max" onclick="change_tab(this.id)">Max Calculator</a>
+                    |
+                    <a class="notselected" id="goals" onclick="change_tab(this.id)">Goals</a>
+                </nav>
+            </div>
+
+        </header>
+        <main>
+            <section id="placeholder">
+                <h2>Home</h2>
+                <p style="text-align: center;">
+                    Welcome! Here I will share my passion for weightlifting/powerlifting, my journey to where I am today,
+                    and various tips on how to maximize your strength!
+                </p>
+                <br>
+    
+                <figure>
+                    <img src="images/bench_press.png" style="height: 600px; width: auto;">
+                    <br>
+                    <figcaption style="text-align: center; color: #58a4b0">June 6th 2022, Bench Pressing 245 lbs</figcaption>
+                </figure>
+            </section>
+
+            <section id="home_desc" class="hidden_desc">
+                <h2>Home</h2>
+                <p style="text-align: center;">
+                    Welcome! Here I will share my passion for weightlifting/powerlifting, my journey to where I am today,
+                    and various tips on how to maximize your strength!
+                </p>
+                <br>
+    
+                <figure>
+                    <img src="images/bench_press.png" style="height: 600px; width: auto;">
+                    <br>
+                    <figcaption style="text-align: center; color: #58a4b0">June 6th 2022, Bench Pressing 245 lbs</figcaption>
+                </figure>
+            </section>
+
+            <section id="about_desc" class="hidden_desc">
+                <h2>About</h2>
+                <p>
+                    I have been lifting weights for 2.5 years, but just recently started taking powerlifting more seriously.
+                    Within those 2 years I gained around 30 lbs of muscle, and progressed all of my lifts upwards of 200 lbs.
+                    The excersises I focus on the most are bench press, squat, and the conventional deadlift. I got into lifting
+                    when covid hit in 2019 and since then have been consistently going to the gym 6 days per week.
+                </p>
+                <p><strong>Current Maxes:</strong></p>
+                <ul>
+                    <li>Bench Press: 265 lbs</li>
+                    <li>Squat: 365 lbs</li>
+                    <li>Deadlift: 475 lbs</li>
+                </ul>
+                <br>
+                <figure>
+                    <img src="images/deadlift.jpeg" style="height: 600px; width: auto;">
+                    <br>
+                    <figcaption style="text-align: center; color: #58a4b0">Deadlifting 455lbs at UREC</figcaption>
+                </figure>
+
+            </section>
+
+            <section id="schedule_desc" class="hidden_desc">
+                <h2>Workout Routine</h2>
+                <p style="text-align: center;">Push (Chest, Triceps, and Biceps)</p>
+                <table>
+                    <tr>
+                        <th>Excersise</th>
+                        <th>Sets</th>
+                        <th>Repititions</th>
+                    </tr>
+                    <tr>
+                        <td>Bench Press</td>
+                        <td>5</td>
+                        <td>5-10</td>
+                    </tr>
+                    <tr>
+                        <td>Overhead Press</td>
+                        <td>4</td>
+                        <td>8-10</td>
+                    </tr>
+                    <tr>
+                        <td>Incline Dumbell Bench</td>
+                        <td>4</td>
+                        <td>8-12</td>
+                    </tr>
+                    <tr>
+                        <td>Lateral Raises</td>
+                        <td>4</td>
+                        <td>10-15</td>
+                    </tr>
+                    <tr>
+                        <td>Chest Fly's</td>
+                        <td>4</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>Tricep Push Down</td>
+                        <td>4</td>
+                        <td>10-15</td>
+                    </tr>
+                    <tr>
+                        <td>Skull Crushers</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                    </tr>
+                </table>
+                <p style="text-align: center;">Pull (Back and Biceps)</p>
+                <table>
+                    <tr>
+                        <th>Excersise</th>
+                        <th>Sets</th>
+                        <th>Repititions</th>
+                    </tr>
+                    <tr>
+                        <td>Pull-ups</td>
+                        <td>4-5</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>Barbell Rows</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                    </tr>
+                    <tr>
+                        <td>Rope Pullovers</td>
+                        <td>4</td>
+                        <td>12-15</td>
+                    </tr>
+                    <tr>
+                        <td>Face Pulls</td>
+                        <td>4</td>
+                        <td>12-15</td>
+                    </tr>
+                    <tr>
+                        <td>Dumbell Curls</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                    </tr>
+                    <tr>
+                        <td>Rope Hammer Curls</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                    </tr>
+                    <tr>
+                        <td>Incline Curls</td>
+                        <td>3</td>
+                        <td>F</td>
+                    </tr>
+                </table>
+                <p style="text-align: center;">Legs Day 1</p>
+                <table>
+                    <tr>
+                        <th>Excersise</th>
+                        <th>Sets</th>
+                        <th>Repititions</th>
+                    </tr>
+                    <tr>
+                        <td>Deadlifts</td>
+                        <td>5</td>
+                        <td>1-6</td>
+                    </tr>
+                    <tr>
+                        <td>Box Squats</td>
+                        <td>5</td>
+                        <td>8-12</td>
+                    </tr>
+                    <tr>
+                        <td>Leg Curls</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                    </tr>
+                    <tr>
+                        <td>Leg Extensions</td>
+                        <td>4</td>
+                        <td>10-15</td>
+                    </tr>
+                    <tr>
+                        <td>Calf Raises</td>
+                        <td>4</td>
+                        <td>12-15</td>
+                    </tr>
+                </table>
+                <p style="text-align: center;">Legs Day 2</p>
+                <table>
+                    <tr>
+                        <th>Excersise</th>
+                        <th>Sets</th>
+                        <th>Repititions</th>
+                    </tr>
+                    <tr>
+                        <td>Squats</td>
+                        <td>5</td>
+                        <td>1-8</td>
+                    </tr>
+                    <tr>
+                        <td>Romanian Deadlifts</td>
+                        <td>4</td>
+                        <td>8-12</td>
+                    </tr>
+                    <tr>
+                        <td>Leg Curls</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                    </tr>
+                    <tr>
+                        <td>Leg Press</td>
+                        <td>4</td>
+                        <td>8-12</td>
+                    </tr>
+                    <tr>
+                        <td>Calf Raises</td>
+                        <td>4</td>
+                        <td>12-15</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="hidden_desc" id="progression_desc">
+                <h2>My Progression</h2>
+                <h3>More will be added soon!</h3>
+                <br>
+                <figure>
+                    <img src="images/deadlift2.jpeg" style="height: 500px; width: auto;">
+                    <figcaption style="text-align: center;">August 12th 2020, Deadlifting 225 lbs</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/squat.jpeg" style="height: 500px; width: auto;">
+                    <figcaption style="text-align: center;">December 13th 2020, Squatting 245 lbs</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/squat2.png" style="height: 500px; width: auto;">
+                    <figcaption style="text-align: center;">June 13th 2022, Squatting 345 lbs</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/deadlift.jpeg" style="height: 500px; width: auto;">
+                    <figcaption style="text-align: center;">July 18th 2022, Deadlifting 455 lbs<figcaption>
+                </figure>
+                
+            </section>
+            <section class="hidden_desc" id="max_desc">
+                <h2>Max Calculator</h2>
+                <br>
+                <figure>
+                    <img src="images/weightlifting.jpeg" style="height: 250px; width:auto;">
+                </figure>
+                <label style="margin-left: 100px;">Enter the weight in lbs:<input type="number" id="weight"></label>
+                <br>
+                <label style="margin-left: 100px;">Enter the number of repititions:<input type="number" id="reps"></label>
+                <br>
+                <button style="margin-left: 100px;" onclick="max_calculator()">Calculate</button>
+                <p id="output"></p>
+
+            </section>
+            <section class="hidden_desc" id="goals_desc">
+                <h2>WeightLifting Goals</h2>
+                <br>
+                <p><strong>Long-term Goals:</strong></p>
+                <ol>
+                    <li>Deadlift 495 by end of 2022</li>
+                    <li>Squat 405 by July 2023</li>
+                    <li>Bench Press 315 lbs by 2024</li>
+                    <li>Shoulder press 185 lbs</li>
+                    <li>Hit the 1100 lbs club at the end of the year</li>
+                </ol>
+
+                <p><strong> Goals: </strong></p>
+                <ol>
+                    <li>Deadlift 485 by December</li>
+                    <li>Squat 385 by end of 2022</li>
+                    <li>Bench Press 275 by December</li>
+                </ol>
+
+                <p>Goal Setter:</p>
+                <textarea style="margin-left: 100px" id="goal"></textarea>
+                <br>
+                <button style="margin-left: 100px;" onclick="set_goal()">Set Goal</button>
+                <button onclick="clear_text()">Clear</button>
+                <br>
+                <div id="goal_list"></div>
+                
+
+            </section>
+        </main>
+        <footer>
+            <br>
+            <p style="text-align: center"><a href="../GazjukStudios.com/index.html" style="font-size: 20px;">Designed by Gazjuk Studios 2022.</a></p>
+            <br>
+            
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fzgazjuk.github.io/itis3135/hobby/index.html%2F" class="validator">
+                <img src="images/w3c_html.png" height="30" width="80" alt="HTML Validator">
+            </a>
+          
+              <!-- css w3c validator with icon -->
+              <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzgazjuk.github.io/itis3135/hobby/index.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
+                class="validator">
+                <img src="images/w3c_css.png" height="30" width="80" alt="CSS Validator">
+              </a>
+
+        </footer>
+    </body>
+</html>
