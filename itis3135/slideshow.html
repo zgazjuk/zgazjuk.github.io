@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Linking the font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/default.css" type="text/css">
+  <title> Zach Gazjuk | ITIS 3135 | Slideshow </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <script src="jQuery/jquery-3.6.1.min.js"></script>
+  <script src="scripts/slideshow.js"></script>
+
+  <style>
+    #images {
+        position:relative;
+    }
+    #images img{
+        position:absolute;
+        top:0;
+        left:0;
+        display:none;
+    }
+
+    #images{
+        height: 300px;
+        width: 320px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+  </style>
+  
+</head>
+
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h3>Activity #9 Slideshow</h3>
+    <br>
+    <h3>Bird Pictures</h3>
+    <div id="images">
+        <img src="images/parrot.jpeg" id="image1" style="height: auto; width:320px;">
+        <img src="images/cardinal.jpeg" id="image2" style="height: auto; width:320px;">
+        <img src="images/eagle.jpeg" id="image3" style="height: auto; width:320px;">
+        <img src="images/bluejay.jpeg" id="image4" style="height: auto; width:320px;">
+        <img src="images/owl.jpeg" id="image5" style="height: auto; width:320px;">
+        <img src="images/hummingbird.jpeg" id="image6" style="height: auto; width:320px;">
+    </div>
+    <div id="arrow_buttons" style="text-align: center;">
+        <button style="width: 60px; font-size: 30px;" id="left-arrow">⇦</button>
+        <button style="width: 60px; font-size: 30px;" id="right-arrow">⇨</button>
+    </div>
+
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="scripts/HTMLInclude.js"></script>
+</body>
+
+</html>
