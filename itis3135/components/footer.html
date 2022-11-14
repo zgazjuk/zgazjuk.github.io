@@ -17,13 +17,21 @@
     <p>Designed by <a href="GazjukStudios.com/index.html">Gazjuk Studios Ⓒ 2022.</a></p>
 
     <!-- html5 w3c validator with icon-->
-    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fzgazjuk.github.io%2F" class="validator">
+    <!--href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fzgazjuk.github.io%2F" -->
+    <a href="https://validator.w3.org/check?uri=referer" class="validator" id="html_validation">
       <img src="images/w3c_html.png" height="30" width="80" alt="HTML Validator">
     </a>
 
     <!-- css w3c validator with icon -->
-    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzgazjuk.github.io&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"
-      class="validator">
+    <!-- href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzgazjuk.github.io&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en"-->
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" class="validator" id="css_validation">
       <img src="images/w3c_css.png" height="30" width="80" alt="CSS Validator">
     </a>
+
+    <script>
+      window.onload = function(){
+        document.getElementById("html_validation").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("css_validation").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      }
+    </script>
 </footer>
