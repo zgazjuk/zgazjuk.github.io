@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <script src="scripts/slider.js"></script>
 </head>
 
 <body>
@@ -34,7 +38,14 @@
         so you can be kept up to date about what is happening in our country. 
     </h3>
     <br>
-    <img src="images/american_flag.webp" style="height: auto; width: 600px">
+    <div id="bx-wrapper">
+    <ul id="slider" class="bxSlider">
+      <li><img src="images/american_flag.webp" class="images" alt="" title="American Flag"></li>
+      <li><img src="images/civil_war.jpeg" class="images" alt="" title="Civil War (1861-1865)"></li>
+      <li><img src="images/world_war_1.jpeg" class="images" alt="" title="World War 1 (1914-1918)"></li>
+      <li><img src="images/world_war_2.jpeg" class="images" alt="" title="World War 2 (1939-1945)"></li>
+    </ul>
+    </div>
     <br>
     <p>
         The US military consists of 5 main branches which are the Army, Air Force, Navy, Coast Guard, and Marines. 
