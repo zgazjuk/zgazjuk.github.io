@@ -6,7 +6,10 @@
   <title> Military Source | Air Force </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script src="scripts/defaultscripts.js"></script>
-
+  <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="scripts/accordion.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
 
@@ -14,8 +17,7 @@
 
 <body>
   <header>
-    <h1> Military Source </h1>
-    <br>
+    <img src="images/logo.png" class="logo" alt="Military Source Logo">
     <div class="navbar">
       <a class="home" href="index.html">Home</a>
       <a class="army" href="army.html">Army</a>
@@ -31,19 +33,13 @@
   <main>
     <br>
     <br>
-    <img src="images/airforce.png" style="width: 250px; height: auto;">
+    <img src="images/airforce.png" style="width: 250px; height: auto;" alt="Airforce Logo">
     <br>
-    <nav>
-        <a class="notselected" id="description" onclick="change_tab(this.id)">Description</a>
-        |
-        <a class="notselected" id="history" onclick="change_tab(this.id)">History</a>
-        |
-        <a class="notselected" id="careers" onclick="change_tab(this.id)">Careers</a>
-    </nav>
-    <section id="placeholder">
-      <h3>Description</h3>
-      <br>
-      <img src="images/airforce_action.jpeg" style="width: 600px" height="auto">
+    <br>
+    <div id="accordion" class="acc_air">
+    <h3 class="acc_title">Description</h3>
+    <div>
+      <img src="images/airforce_action.jpeg" style="width: 600px" height="auto" alt="Airforce Action">
       <br>
       <p style="margin-left: 250px; margin-right: 250px;">
           The Airforce is the military branch which focuses on all aspects of air power. 
@@ -52,26 +48,11 @@
           Its mission is "to fly, fight and win - airpower anytime, anywhere".
       </p>
 
-    </section>
-
-    <section id="description_desc" class="hidden_desc">
-      <h3>Description</h3>
-      <br>
-      <img src="images/airforce_action.jpeg" style="width: 600px" height="auto">
-      <br>
-      <p style="margin-left: 250px; margin-right: 250px;">
-          The Airforce is the military branch which focuses on all aspects of air power. 
-          This includes 5 core missions including air superiority, global strike, rapid 
-          global mobility, intelligence; surveillance and reconnaissance; and command and control.
-          Its mission is "to fly, fight and win - airpower anytime, anywhere".
-      </p>
-    </section>
+    </div>
     
-    
-    <section id="history_desc" class="hidden_desc">
-        <h3>History</h3>
-        <br>
-        <img src="images/airforce_history.webp" style="width:600px; height:auto;">
+    <h3 class="acc_title">History</h3>
+    <div>
+        <img src="images/airforce_history.webp" style="width:600px; height:auto;" alt="Airforce History">
         <br>
         <p>The U.S. War Department created the first antecedent of the U.S. Air Force, as a part 
           of the U.S. Army, in 1907, which through a succession of changes of organization, titles, 
@@ -99,11 +80,9 @@
          </ul>
 
 
-    </section>
-
-    <section id="careers_desc" class="hidden_desc">
-        <h3>Careers</h3>
-        <br>
+      </div>
+      <h3 class="acc_title">Careers</h3>
+      <div>
         <p>The following jobs include officer and enlisted options: </p>
         <ul>
           <li>Combat & Warfare</li>
@@ -113,8 +92,9 @@
           <li>Law & Order</li>
         </ul>
         <br>
-        <p>Click <a href="https://www.airforce.com/careers">here</a> to explore more.</p>
-    </section>
+        <p>Click <a href="https://www.airforce.com/careers" class="link">here</a> to explore more.</p>
+      </div>
+    </div>
 
     
   </main>

@@ -6,7 +6,10 @@
   <title> Military Source | Army </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script src="scripts/defaultscripts.js"></script>
-
+  <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="scripts/accordion.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
 
@@ -14,8 +17,7 @@
 
 <body>
   <header>
-    <h1> Military Source </h1>
-    <br>
+    <img src="images/logo.png" class="logo" alt="Military Source Logo">
     <div class="navbar">
         <a class="home" href="index.html">Home</a>
         <a class="army" href="army.html">Army</a>
@@ -31,45 +33,25 @@
   <main>
     <br>
     <br>
-    <img src="images/army.png" style="width: 200px; height: auto;">
+    <img src="images/army.png" style="width: 200px; height: auto;" alt="Army Logo">
     <br>
-    <nav>
-        <a class="notselected" id="description" onclick="change_tab(this.id)">Description</a>
-        |
-        <a class="notselected" id="history" onclick="change_tab(this.id)">History</a>
-        |
-        <a class="notselected" id="careers" onclick="change_tab(this.id)">Careers</a>
-    </nav>
-    <section id="placeholder">
-        <h3>Description</h3>
-        <br>
-        <img src="images/army_action.webp" style="width: 600px" height="auto">
+    <br>
+    <div id="accordion" class="acc_army">
+    <h3 class="acc_title">Description</h3>
+    <div>
+        <img src="images/army_action.webp" style="width: 600px" height="auto" alt="Army Action">
         <br>
         <p style="margin-left: 250px; margin-right: 250px;">
             The Army is a land service branch of the United States Armed Forces. Its main goal is to deploy, 
             fight, and win our nations wars, by providing ready, prompt and sustained land dominance by Army 
             forces across the full spectrum of conflict as part of the joint force.  
         </p>
-    </section>
-
-    <section id="description_desc" class="hidden_desc">
-        <h3>Description</h3>
-        <br>
-        <img src="images/army_action.webp" style="width: 600px" height="auto">
-        <br>
-        <p style="margin-left: 250px; margin-right: 250px;">
-            The Army is a land service branch of the United States Armed Forces. Its main goal is to deploy, 
-            fight, and win our nations wars, by providing ready, prompt and sustained land dominance by Army 
-            forces across the full spectrum of conflict as part of the joint force.  
-        </p>
-    </section>
+    </div>
     
-    
-    <section id="history_desc" class="hidden_desc">
-        <h3>History</h3>
-        <br>
+    <h3 class="acc_title">History</h3>
+    <div>
         <figure>
-            <img src="images/continental_army.jpg" style="width: 600px" height="auto">
+            <img src="images/continental_army.jpg" style="width: 600px" height="auto" alt="Continental Army">
             <figcaption>Continental Army during the Revolutionary War</figcaption>
         </figure>
         <p>The Army was founded in 1775 by The Second Continental Congress, and is the oldest branch of the US military. 
@@ -83,11 +65,10 @@
             American Civil War (1861-65), American Indian Wars (ended 1890), Spanish-American War (1898), World War I (1917–18), 
             World War II (1941-45), Korean War (1950-53) and Vietnam War (1965-71).
         </p>
-    </section>
+    </div>
 
-    <section id="careers_desc" class="hidden_desc">
-        <h3>Careers</h3>
-        <br>
+    <h3 class="acc_title">Careers</h3>
+    <div>
         <p>The following jobs include officer and enlisted options: </p>
         <ul style="padding-left: 200px;">
             <li>Mechanics & Engineering</li>
@@ -98,8 +79,9 @@
             <li>Aviation and Aerial Defense</li>
         </ul>
         <br>
-        <p>Click <a href="https://www.goarmy.com/careers-and-jobs/career-match/browse-jobs.html">here</a> to explore more.</p>
-    </section>
+        <p>Click <a class="link" href="https://www.goarmy.com/careers-and-jobs/career-match/browse-jobs.html">here</a> to explore more.</p>
+    </div>
+    </div>
 
     
   </main>

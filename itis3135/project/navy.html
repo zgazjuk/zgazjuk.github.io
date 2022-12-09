@@ -6,7 +6,10 @@
   <title> Military Source | Navy </title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script src="scripts/defaultscripts.js"></script>
-
+  <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="scripts/accordion.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
 
@@ -14,8 +17,7 @@
 
 <body>
   <header>
-    <h1> Military Source </h1>
-    <br>
+    <img src="images/logo.png" class="logo" alt="Military Source Logo">
     <div class="navbar">
       <a class="home" href="index.html">Home</a>
       <a class="army" href="army.html">Army</a>
@@ -31,19 +33,12 @@
   <main>
     <br>
     <br>
-    <img src="images/navy.png" style="width: 250px; height: auto;">
+    <img src="images/navy.png" style="width: 250px; height: auto;" alt="Navy Logo">
     <br>
-    <nav>
-        <a class="notselected" id="description" onclick="change_tab(this.id)">Description</a>
-        |
-        <a class="notselected" id="history" onclick="change_tab(this.id)">History</a>
-        |
-        <a class="notselected" id="careers" onclick="change_tab(this.id)">Careers</a>
-    </nav>
-    <section id="placeholder">
-        <h3>Description</h3>
-        <br>
-        <img src="images/navy_action.jpeg" style="width: 600px; height: auto;">
+    <div id="accordion" class="acc_navy">
+    <h3 class="acc_title">Description</h3>
+    <div>
+        <img src="images/navy_action.jpeg" style="width: 600px; height: auto;" alt="Navy in Action">
         <br>
         <p style="margin-left: 250px; margin-right: 250px;">
           The Navy, naval force, or maritime force is the branch of a nation's armed forces principally 
@@ -51,25 +46,11 @@
           combat operations and related functions.
         </p>
 
-    </section>
-
-    <section id="description_desc" class="hidden_desc">
-      <h3>Description</h3>
-      <br>
-      <img src="images/navy_action.jpeg" style="width: 600px; height: auto;">
-      <br>
-      <p style="margin-left: 250px; margin-right: 250px;">
-        The Navy, naval force, or maritime force is the branch of a nation's armed forces principally 
-        designated for naval and amphibious warfare; namely, lake-borne, riverine, littoral, or ocean-borne 
-        combat operations and related functions.
-      </p>
-    </section>
+      </div>
     
-    
-    <section id="history_desc" class="hidden_desc">
-        <h3>History</h3>
-        <br>
-        <img src="images/navy_history.jpeg" style="width:600px; height:auto;">
+    <h3 class="acc_title">History</h3>
+    <div>
+        <img src="images/navy_history.jpeg" style="width:600px; height:auto;" alt="Navy History">
         <br>
         <p>The United States Navy claims October 13, 1775 as the date of its official establishment, when the 
           Second Continental Congress passed a resolution creating the Continental Navy. At the end of the Revolutionary 
@@ -84,11 +65,10 @@
           undisputed naval superpower.
         </p>
 
-    </section>
+      </div>
 
-    <section id="careers_desc" class="hidden_desc">
-      <h3>Careers</h3>
-      <br>
+    <h3 class="acc_title">Careers</h3>
+    <div>
       <p>The following jobs include officer and enlisted options: </p>
       <ul>
         <li>Arts & Communications</li>
@@ -100,8 +80,9 @@
         <li>And many more</li>
       </ul>
       <br>
-      <p>Click <a href="https://www.navy.com/careers">here</a> to explore more.</p>
-    </section>
+      <p>Click <a class="link" href="https://www.navy.com/careers">here</a> to explore more.</p>
+    </div>
+  </div>
 
     
   </main>
